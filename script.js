@@ -1,8 +1,3 @@
-const show = document.querySelector('.show');
-show.innerHTML='click on the edit icon to see the hide text.';
-setTimeout(()=>{
-    show.innerHTML='';
-},1500)
 
 const addButton = document.querySelector('#add');
 
@@ -73,6 +68,12 @@ const notes = JSON.parse(localStorage.getItem('notes'));
 if(notes){
     notes.forEach((note) => {
         addNewNote(note)
+        const show = document.querySelector('.show');
+        show.innerHTML='click on the edit icon to see the hide text.';
+        setTimeout(()=>{
+           show.innerHTML='';
+       },1500)
+
     })
 }
 
